@@ -31,3 +31,37 @@ This bot provides slash commands for users to create and customize personal role
 2. Install the required packages:
    ```bash
    pip install -r requirements.txt
+   ```
+
+### Configuration
+1. Update the `server_id` and `required_role_id` variables with your server and role IDs.
+2. Replace the placeholder in `bot.run('')` with your bot's token.
+
+### Color Map
+This bot supports a predefined set of color names (e.g., "red", "blue", "green") and hex color codes (e.g., `#FF5733`). Check the `color_map` dictionary for all supported color names.
+
+## Usage
+
+1. Start the bot:
+   ```bash
+   python main.py
+   ```
+2. Use the `/role` commands directly in the Discord server.
+
+### Example Workflow
+1. **Create a Custom Role**: Use `/role name MyCustomRole`.
+2. **Add Color**: Use `/role colour red` or `/role colour #FF0000`.
+3. **Add Icon**: Use `/role icon 🌟` or `/role icon (emoji URL)`.
+
+## Error Handling
+
+- If the bot encounters permission issues, it will send a message to the user or log the error.
+- Use the `/role name` command first to create the role if the bot cannot find an existing custom role for the user.
+
+### Additional Notes
+- Ensure the bot has permission to manage roles in your server.
+- Users need the `required_role_id` role to utilize these commands.
+
+---
+
+This bot was designed to help Discord server members customize their roles efficiently. Contributions and suggestions are welcome!
